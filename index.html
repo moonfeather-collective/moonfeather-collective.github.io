@@ -7,8 +7,6 @@
   <title>Moonfeather Collective - Dart&Flutter OSS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Instrument+Sans:wght@400;700&display=swap&family=Cormorant+Garamond"
-    rel="stylesheet" />
   <style>
     :root {
       --bg: #120d1a;
@@ -20,13 +18,12 @@
       --border: #3e2250;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * {}
 
     body {
+      box-sizing: border-box;
+      margin: 0;
+
       background: var(--bg);
       color: var(--text);
       font-family: 'Instrument Sans', 'Helvetica Neue', 'Arial', sans-serif;
@@ -38,17 +35,83 @@
       padding: 2rem 1rem;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Cormorand Garamond', 'Garamond', 'Georgia', serif;
       font-weight: 500;
       color: var(--accent2);
     }
+
+    section {
+      flex: 1;
+
+      &+& {
+        margin-top: 2rem;
+        /* margin vertical between sections */
+      }
+    }
+
+    section#main {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section#footer {
+      flex: 0;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+        * {
+          flex: 1;
+          text-align: center;
+        }
+      }
+
+      .social-link {
+        color: white;
+        font-size: 1.5rem;
+        display: inline-block;
+      }
+    }
   </style>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Instrument+Sans:wght@400;700&display=swap&family=Cormorant+Garamond"
+    rel="stylesheet" />
 
   <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
   <link href="assets/css/brands.min.css" rel="stylesheet" />
 </head>
+
 <body>
-  <h1>Coming soon!</h1>
+  <section id="main">
+    <h1>Coming soon!</h1>
+  </section>
+  <section id="footer">
+    <div class="row">
+      <a href="https://bsky.social/profile/moonfeather.dev" class="social-link" alt="BlueSky">
+        <i class="fa fa-brands fa-bluesky"></i>
+      </a>
+      <a href="https://github.com/moonfeather-collective" class="social-link" alt="GitHub">
+        <i class="fa fa-brands fa-github"></i>
+      </a>
+      <a href="https://pub.dev/publishers/moonfeather.dev/packages" class="social-link" alt="pub.dev">
+        <i class="fa fa-brands fa-dart-lang"></i>
+      </a>
+    </div>
+  </section>
 </body>
+
 </html>
