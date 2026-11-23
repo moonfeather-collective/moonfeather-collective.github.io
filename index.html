@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Moonfeather Collective - Dart&Flutter OSS</title>
   <meta name="theme-color" content="#120d1a" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="assets/img/Icon.png">
   <link rel="icon" href="assets/img/Icon.png" type="image/png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <style>
@@ -158,7 +159,6 @@
         mask-size: calc(30% + 1.33px);
         mask-origin: border-box;
 
-
         --height-offset: 8vh;
         --speed-offset: 6s;
         --speed-base: 6s;
@@ -198,6 +198,17 @@
 
           --layer-index: 3;
         }
+      }
+    }
+
+    /* iPhone only */
+    @media screen and (orientation: portrait) {
+      body {
+        padding-bottom: 40px;
+      }
+
+      .cloud-background {
+        bottom: -100px;
       }
     }
   </style>
