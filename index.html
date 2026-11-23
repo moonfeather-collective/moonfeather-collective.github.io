@@ -122,7 +122,7 @@
       }
 
       100% {
-        mask-position: -100% 0;
+        mask-position: -129% 0;
       }
     }
 
@@ -156,15 +156,15 @@
         mask-origin: border-box;
 
 
-        --height-offset: 10vh;
-        --speed-offset: 5s;
-        --speed-base: 4s;
+        --height-offset: 8vh;
+        --speed-offset: 6s;
+        --speed-base: 6s;
 
         --layer-count: 4;
 
         bottom: calc(var(--height-offset) * var(--layer-index));
-        animation: scroll calc(var(--speed-base) + var(--speed-offset) * var(--layer-index)) linear infinite;
-        animation-delay: calc(var(--speed-offset) * -var(--layer-index));
+        animation: scroll calc(var(--speed-base) + var(--speed-offset) * var(--layer-index) * var(--layer-index)) linear infinite;
+        animation-delay: calc(var(--speed-offset) * -1 * var(--layer-index));
         z-index: calc(var(--layer-count) - var(--layer-index));
 
         &.layer1 {
